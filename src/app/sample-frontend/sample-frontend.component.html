@@ -1,0 +1,12 @@
+<div>
+    <table>
+        <tr><td>Fruits</td></tr>
+        <ng-container *ngFor="let item of tableData">
+            <tr><td>{{item}}</td></tr>
+        </ng-container>
+   </table>
+</div>
+
+<button nz-button (click)="btnClick()" nzType="primary" class="m-l-5">
+    <i nz-icon nzType="check-circle"></i>Update
+</button>

@@ -1,0 +1,45 @@
+#tableContainer{
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+table, th, td
+{
+    border: 1px solid;    
+}
+
+#numColumnHeader
+{
+    min-width: 50px;
+}
+#valueColumnHeader
+{
+    min-width: 100px;
+}
+
+#numColumn
+{
+    padding-left: 5px;
+}
+#valueColumn
+{
+    padding-left: 5px;
+}
+tr:hover {background-color: #50ffc2;}
+
+
+.buttonStyle{   
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.buttonStyle:hover{   
+    background-color: #ff0202;
+}

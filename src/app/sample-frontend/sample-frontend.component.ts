@@ -11,23 +11,27 @@ export class SampleFrontendComponent implements OnInit {
 
 
   tableData:any;
-
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
 
+  // uses the function created in the service to get the data
   getData():void{
     this.appsService.getValue().subscribe(data=>{
-        this.tableData = data.data;
-        console.log('test');
-        console.log(this.tableData);
+        //I tend to use status codes for easier debugging
+        if(data.status === 1)
+        {
+          this.tableData = data.data;
+        }
+        else
+        {
+          console.log('error fetching data');
+        }        
       }
     );
   }
 
   btnClick(): void {
-    console.log('clicked');
+    this.tableData = [];
     this.getData();
   }
 }

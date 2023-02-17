@@ -1,12 +1,21 @@
-<div>
-    <table>
-        <tr><td>Fruits</td></tr>
-        <ng-container *ngFor="let item of tableData">
-            <tr><td>{{item}}</td></tr>
+
+<div id="tableContainer">
+    <table style="border-collapse: collapse; ">
+        <tr>
+            <th id="numColumnHeader">No.</th>
+            <th id="valueColumnHeader">Fruits</th>        
+        </tr>
+        <ng-container *ngFor="let item of tableData;let i = index">
+            <tr>
+                <!-- uses the index + 1 to show numbers -->
+                <td id="numColumn">{{i + 1}}</td>
+                <td id="valueColumn">{{item}}</td>
+            </tr>
         </ng-container>
    </table>
 </div>
 
-<button nz-button (click)="btnClick()" nzType="primary" class="m-l-5">
-    <i nz-icon nzType="check-circle"></i>Update
-</button>
+
+<!-- since I'm not using any template I opt to use label to make a makeshift customizable button -->
+<label class="buttonStyle" (click)="btnClick()">Get Data</label>
+
